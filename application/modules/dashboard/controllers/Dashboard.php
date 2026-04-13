@@ -13,6 +13,9 @@ class Dashboard extends MY_Controller
 		$data['berita_index'] = $this->get_berita();
 		$data['galeri_index'] = $this->get_galeri();
 		$data['video_index'] = $this->get_video();
+		  // MENU TREE LANGSUNG
+    $data['menu'] = $this->dashboard_model->get_menu_tree();
+	
 		$this->load->view('index_',$data);
 	}
 

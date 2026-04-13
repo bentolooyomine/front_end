@@ -103,6 +103,19 @@ function get_detail_() {
     {
         return $this->db->count_all('visitors');
     }
+public function get_menu_tree()
+{
+    $menu = $this->db->where('is_active', 1)
+                     ->order_by('sort', 'ASC')
+                     ->get('menu')
+                     ->result();
 
+    $tree = [];
+    foreach ($menu as $m) {
+        $tree[$m->parent_id][] = $m;
+    }
+
+    return $tree;
+}
 
 }
