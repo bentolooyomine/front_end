@@ -1,0 +1,133 @@
+.preview-img {
+	margin-top: 40px;
+}
+.bg-overlays {
+	position: absolute;
+	height: 90%;
+	width: 100%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0.5;
+	background-color: #4caf50;
+}
+.slide-bgs {
+	height: 93.5vh;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.text-judul {
+	padding-top: 90px;
+	margin-bottom: 20px;
+	color: #fff !important;
+}
+.menu-app {
+	padding-top: 60px;
+}
+.trans {
+	opacity: 0.85;
+}
+.head-title {
+	background-color: #4caf50;
+}
+.card-hijau {
+	background-color: #4caf50;
+}
+.card-biru {
+	background-color: #2196f3;
+}
+.card-kuning {
+	background-color: #ffa000;
+}
+.card-merah {
+	background-color: #e91e63;
+}
+.card-hijau:hover {
+	background-color: #9e9e9e;
+	cursor: pointer;
+	-webkit-transform: scale(1.08);
+	transform: scale(1.08);
+}
+.card-biru:hover {
+	background-color: #9e9e9e;
+	cursor: pointer;
+	-webkit-transform: scale(1.08);
+	transform: scale(1.08);
+}
+.card-kuning:hover {
+	background-color: #9e9e9e;
+	cursor: pointer;
+	-webkit-transform: scale(1.08);
+	transform: scale(1.08);
+}
+.card-merah:hover {
+	background-color: #9e9e9e;
+	cursor: pointer;
+	-webkit-transform: scale(1.08);
+	transform: scale(1.08);
+}
+.card-isi {
+	padding: 10px 5px 10px 5px !important;
+}
+.img-emot {
+	width: 70px;
+	height: auto;
+}
+.img-modal{
+	width: 220px;
+	height: 220px;
+}
+
+.pesan-jalan {
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	/* flex-direction: column; */
+	min-width: 0;
+	height: 90px;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 0px solid rgba(0, 0, 0, 0.125);
+	border-radius: 5px;
+}
+.text-diskominfo {
+	font-size: 17px;
+	color: white;
+	font-weight: bold;
+	margin-top: 8px;
+	margin-bottom: 0px;
+}
+.text-pesan {
+	font-size: 17px;
+	color: #009b4c;
+	font-weight: bold;
+	margin-top: 8px;
+	margin-bottom: 0px;
+}
+.footer-stand {
+	position: fixed;
+	padding: 10px 0px 0px 0px;
+	bottom: 0;
+	width: 100%;
+	/* Height of the footer*/
+	height: 80px;
+	margin-bottom: -25px;
+}
+.head-table {
+	background-color: #4caf50;
+	color: #fff;
+}
+.table-sm {
+	width: 99%;
+}
+.table-sm thead tr td {
+	font-size: 12.5px;
+	padding: 7px;
+}
+.table-sm tbody tr td {
+	font-size: 12.5px;
+}

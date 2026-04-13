@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from jdih.batangkab.go.id/portal-login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2026 21:54:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>Login Admin JDIH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Admin & Dashboard JDIH" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <link rel="shortcut icon" href="src/back/img/favicon.png">
+    <link href="src/back/css/preloader.min.css" rel="stylesheet" type="text/css" />
+    <link href="src/back/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="src/back/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="src/back/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="src/back/css/auth.css" rel="stylesheet" type="text/css" />
+    <link href="src/modules/alertifyjs/build/css/alertify.min.css" rel="stylesheet" type="text/css" />
+    <link href="src/modules/alertifyjs/build/css/themes/default.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="src/back/libs/jquery/jquery.min.js"></script>
+</head>
+
+<body data-topbar="dark">
+    <div class="bg-soft-light min-vh-100 py-3">
+        <div class="pb-0">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <div class="card mt-3">
+                            <div class="row g-0 align-items-centers">
+                                <div class="col-md-6">
+                                    <img class="card-banner img-fluid" src="src/back/img/bg-app.png" alt="Card image">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="py-5 px-5">
+                                        <div class="auth-content">
+                                            <form class="pt-0" id="form-login">
+                                                <div class="form-floating form-floating-custom mb-4">
+                                                    <input type="text" class="form-control" name="username" id="username" placeholder="Input Username" oninvalid="this.setCustomValidity('Username harus diisi')" oninput="setCustomValidity('')" required>
+                                                    <label for="input-username">Username</label>
+                                                    <div class="form-floating-icon">
+                                                        <i data-feather="users"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-floating form-floating-custom mb-4 auth-pass-inputgroup">
+                                                    <input type="password" class="form-control pe-5" name="password" id="password" placeholder="Input Password" oninvalid="this.setCustomValidity('Password harus diisi')" oninput="setCustomValidity('')" required>
+                                                    <button type="button" class="btn btn-link position-absolute h-100 end-0 top-0" id="password-addon">
+                                                        <i class="mdi mdi-eye-outline font-size-18 text-muted"></i>
+                                                    </button>
+                                                    <label for="input-password">Password</label>
+                                                    <div class="form-floating-icon">
+                                                        <i data-feather="lock"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-5 col-md-4 col-xl-4 text-center mb-3">
+                                                        <div style="margin-top:11px;"><b class="captcha">5724</b></div>                                                    </div>
+                                                    <div class="col-sm-7 col-md-8 col-xl-8">
+                                                        <div class="form-floating form-floating-custom mb-4">
+                                                            <input type="text" name="captcha" id="captcha" class="form-control" placeholder="Input Captcha" oninvalid="this.setCustomValidity('Captcha harus diisi')" oninput="setCustomValidity('')" required>
+                                                            <label for="input-username">Captcha</label>
+                                                            <div class="form-floating-icon">
+                                                                <i data-feather="key"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-0">
+                                                    <button type="button" id="btn_auth" class="btn btn-success btn-lg w-100 waves-effect waves-light"><i data-feather="log-in"></i> Masuk</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rightbar-overlay"></div>
+
+    <script src="src/back/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="src/back/libs/metismenu/metisMenu.min.js"></script>
+    <script src="src/back/libs/simplebar/simplebar.min.js"></script>
+    <script src="src/back/libs/node-waves/waves.min.js"></script>
+    <script src="src/back/libs/feather-icons/feather.min.js"></script>
+    <script src="src/back/libs/pace-js/pace.min.js"></script>
+    <script src="src/back/js/pages/pass-addon.init.js"></script>
+    <script src="src/back/js/pages/feather-icon.init.js"></script>
+    <script src="src/modules/alertifyjs/build/alertify.min.js"></script>
+
+    <audio id="error" src="src/back/audio/error.mp3"></audio>
+    <audio id="success" src="src/back/audio/success.mp3"></audio>
+    <script src="src/back/app/auth.js"></script>
+    <script src="src/back/js/config.js"></script>
+
+</body>
+
+
+<!-- Mirrored from jdih.batangkab.go.id/portal-login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2026 21:54:18 GMT -->
+</html>

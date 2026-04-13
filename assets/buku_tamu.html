@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from jdih.batangkab.go.id/buku_tamu by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2026 21:54:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>Buku Tamu JDIH Kab. Batang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <link rel="shortcut icon" href="src/back/img/logo-batang.png">
+    <link href="src/back/css/preloader.min.css" rel="stylesheet" type="text/css" />
+    <link href="src/back/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="src/back/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="src/back/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="src/back/css/guest.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="src/modules/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+    <link href="src/modules/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="src/modules/alertifyjs/build/css/alertify.min.css" rel="stylesheet" type="text/css" />
+    <link href="src/modules/alertifyjs/build/css/themes/default.min.css" rel="stylesheet" type="text/css" />
+    <script src="src/back/libs/jquery/jquery-2.2.3.min.js"></script>
+    <script>
+        const api_key = 'ZGhSdSt6U2NnQ3pvRXZWK2dUOTZLekkrZ0NHcngwOEZGcjNsZW9EZXpyaz0=';
+        const app_url = 'index.html';
+    </script>
+</head>
+
+<body data-layout="horizontal" data-topbar="dark">
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <div class="d-flex">
+                <div class="navbar-brand-box">
+                    <a href="index.html" class="logo logo-dark">
+                        <span class="logo-sm">
+                            <img src="src/front/images/logo-jdih.png" alt="" height="65">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="src/front/images/logo-jdih.png" alt="" height="65"> <span class="logo-txt">JDIH Kab. Batang</span>
+                        </span>
+                    </a>
+                    <a href="index.html" class="logo logo-light">
+                        <span class="logo-sm">
+                            <img src="src/front/images/logo-jdih.png" alt="" height="65">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="src/front/images/logo-jdih.png" alt="" height="65"> <span class="logo-txt">JDIH Kab. Batang</span>
+                        </span>
+                    </a>
+                </div>
+                <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item waves-effect waves-light" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                    <i class="fa fa-fw fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="d-flex">
+                <div class="dropdown d-inline-block">
+                    <div class="hari-ini text-center">
+                        <div id="tanggal" style="font-size:14px;color:white;margin-top:-7px;"></div>
+                        <div id="waktu" style="font-size:20px;color:white;margin-top:0px;"></div>
+                    </div>
+
+                    <script type='text/javascript'>
+                        var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+                        var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+                        var date = new Date();
+                        var day = date.getDate();
+                        var month = date.getMonth();
+                        var thisDay = date.getDay(),
+                            thisDay = myDays[thisDay];
+                        var yy = date.getYear();
+                        var year = (yy < 1000) ? yy + 1900 : yy;
+                        document.getElementById('tanggal').innerHTML = thisDay + ", " + day + ' ' + months[month] + ' ' + year;
+
+                        function startTime() {
+                            var today = new Date(),
+                                curr_hour = today.getHours(),
+                                curr_min = today.getMinutes(),
+                                curr_sec = today.getSeconds();
+                            curr_hour = checkTime(curr_hour);
+                            curr_min = checkTime(curr_min);
+                            curr_sec = checkTime(curr_sec);
+                            document.getElementById('waktu').innerHTML = curr_hour + ":" + curr_min + ":" + curr_sec + "  " + "<span class=\"wilayah\">WIB</span>";
+                        }
+
+                        function checkTime(i) {
+                            if (i < 10) {
+                                i = "0" + i;
+                            }
+                            return i;
+                        }
+                        setInterval(startTime, 500);
+                    </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid" style="margin-top:-50px;">
+                <div class="text-center mb-4">
+                    <h3>Buku Pengunjung JDIH Kabupaten Blora</h3>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="text-center">
+                                    <h5>Selamat Datang</h5>
+                                    <h3>BUKU PENGUNJUNG</h3>
+                                </div>
+                                <img src="src/front/images/buku-tamu.png" class="img-responsive img-modal">
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12" style="margin-left:-15px;">
+                                        <div class="btn-group btn-group-example mb-3" role="group">
+                                            <a href="buku_tamu.html" class="btn btn-outline-primary w-sm">Form</a>
+                                            <a href="buku_tamu/polling.html" class="btn btn-outline-primary w-sm">Polling</a>
+                                            <a href="buku_tamu/statistik.html" class="btn btn-outline-primary w-sm">Statistik</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-9 col-md-6">
+                        <div class="card card-h-100">
+    <div class="card-header head-title">
+        <h5 class="text-white">Register Pengunjung</h5>
+    </div>
+    <div class="card-body">
+        <form id="form-pengunjung">
+            <div class="mb-3">
+                <label class="form-label" for="form-lg-input">Nama Lengkap</label>
+                <input pattern="[A-Za-z]" class="form-control form-control-lg" type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Ketikkan Nama Lengkap Anda" oninvalid="this.setCustomValidity('Nama Lengkap harus diisi')" oninput="setCustomValidity('')" oninput="this.value = this.value.toUpperCase()" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="form-lg-input">Alamat Lengkap</label>
+                <input pattern="[A-Za-z]" class="form-control form-control-lg" type="text" name="alamat_lengkap" id="alamat_lengkap" placeholder="Ketikkan Alamat Lengkap Anda" oninvalid="this.setCustomValidity('Alamat Lengkap harus diisi')" oninput="setCustomValidity('')" oninput="this.value = this.value.toUpperCase()" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="form-lg-input">Asal Instansi</label>
+                <input pattern="[A-Za-z]" class="form-control form-control-lg" type="text" name="asal_instansi" id="asal_instansi" placeholder="Ketikkan Asal Instansi Anda" oninvalid="this.setCustomValidity('Asal Instansi harus diisi')" oninput="setCustomValidity('')" oninput="this.value = this.value.toUpperCase()" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="form-lg-input">Keperluan</label>
+                <input pattern="[A-Za-z]" class="form-control form-control-lg" type="text" name="keperluan" id="keperluan" placeholder="Ketikkan Keperluan Anda" oninvalid="this.setCustomValidity('Keperluan harus diisi')" oninput="setCustomValidity('')" oninput="this.value = this.value.toUpperCase()" required>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="d-grid gap-2">
+                            <button type="button" id="btn_ok" class="btn btn-success btn-lg waves-effect waves-light">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="view_tamu" class="modal fade" data-bs-backdrop="static" tabindex="-1" aria-hidden="true" data-bs-scroll="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body mx-2">
+                <div class="mb-5 text-center">
+                    <img src="src/front/images/emot/ico-hand-star.png" class="img-responsive img-modal">
+                </div>
+                <h3 id="nama_pengunjung"></h3>
+                <h5 class="mt-3">Terima kasih sudah berkunjung ke JDIH Kabupaten Blora.<br>
+                    Mohon berkenan untuk mengisi <b>Indeks Kepuasan Pengunjung JDIH</b> untuk meningkatkan kualitas pelayanan kami.
+                </h5>
+                <div class="mt-3 text-center">
+                    <a href="buku_tamu/polling.html" class="btn btn-lg btn-primary">Indeks Kepuasan Pengunjung</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-lg waves-effect" data-bs-dismiss="modal">
+                    <i class="fas fa-times-circle"></i> Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carded footer-stand">
+        <div class="row pesan-jalan">
+            <div class="col-sm-2" style="background-color:#4caf50;">
+                <div id="copyright">
+                    <p class="text-center text-diskominfo">&copy;  | JDIH Kab. Batang</p>
+                </div>
+            </div>
+            <div class="col-sm-10" style="background-color:#FFCB00;">
+                <div id="running">
+                    <marquee behavior='scroll' scrollamount="2" direction="left">
+                        <p class="text-pesan">
+                                                            <img src="src/front/images/logo-jdih.png" style="width:35px;height:auto;">&nbsp;Instagram : jdihbatang&nbsp;
+                                                            <img src="src/front/images/logo-jdih.png" style="width:35px;height:auto;">&nbsp;Facebook : JDIH Batang&nbsp;
+                                                            <img src="src/front/images/logo-jdih.png" style="width:35px;height:auto;">&nbsp;Twitter : BatangJdih&nbsp;
+                                                            <img src="src/front/images/logo-jdih.png" style="width:35px;height:auto;">&nbsp;Youtube : JDIH Batang&nbsp;
+                                                            <img src="src/front/images/logo-jdih.png" style="width:35px;height:auto;">&nbsp;WA JDIH : 085800139070&nbsp;
+                                                            <img src="src/front/images/logo-jdih.png" style="width:35px;height:auto;">&nbsp;Tiktok : JDIH Batang&nbsp;
+                                                    </p>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HightChart -->
+    <script src="src/modules/highchart/highcharts.js"></script>
+    <script src="src/modules/highchart/highcharts-3d.js"></script>
+    <script src="src/modules/highchart/exporting.js"></script>
+    <script src="src/modules/highchart/export-data.js"></script>
+    <!-- <script src="https://jdih.batangkab.go.id/src/modules/highchart/chart.js"></script> -->
+
+    <!-- JAVASCRIPT -->
+    <script src="src/back/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="src/back/libs/metismenu/metisMenu.min.js"></script>
+    <script src="src/back/libs/simplebar/simplebar.min.js"></script>
+    <script src="src/back/libs/node-waves/waves.min.js"></script>
+    <script src="src/back/libs/feather-icons/feather.min.js"></script>
+    <script src="src/back/libs/pace-js/pace.min.js"></script>
+    <script src="src/back/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="src/back/libs/jquery-countdown/jquery.countdown.min.js"></script>
+    <script src="src/modules/alertifyjs/build/alertify.min.js"></script>
+    <script src="src/front/js/marquee.js"></script>
+    <script type='text/javascript'>
+        $('marquee').marquee();
+    </script>
+
+    <audio id="error" src="src/back/audio/error.mp3"></audio>
+    <audio id="success" src="src/back/audio/success.mp3"></audio>
+    <script src="src/app/polling.js"></script>
+    <script src="src/back/js/config.js"></script>
+</body>
+
+
+<!-- Mirrored from jdih.batangkab.go.id/buku_tamu by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2026 21:54:22 GMT -->
+</html>
