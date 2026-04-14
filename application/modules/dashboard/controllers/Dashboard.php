@@ -14,29 +14,29 @@ class Dashboard extends MY_Controller
 		$data['galeri_index'] = $this->get_galeri();
 		$data['video_index'] = $this->get_video();
 		  // MENU TREE LANGSUNG
-    $data['menu'] = $this->dashboard_model->get_menu_tree();
+    $data['menu'] = $this->Dashboard_model->get_menu_tree();
 	
 		$this->load->view('index_',$data);
 	}
 
 	function get_peraturan() {
-		return $this->dashboard_model->get_peraturan();
+		return $this->Dashboard_model->get_peraturan();
 	}
 	function get_berita() {
-		return $this->dashboard_model->get_berita();
+		return $this->Dashboard_model->get_berita();
 	}
 
 	function get_galeri() {
-		return $this->dashboard_model->get_galeri();
+		return $this->Dashboard_model->get_galeri();
 	}
 
 function get_video() {
-		return $this->dashboard_model->get_video();
+		return $this->Dashboard_model->get_video();
 	}
 
 
 	function get_detail_() {
-		$data = $this->dashboard_model->get_detail_();
+		$data = $this->Dashboard_model->get_detail_();
 
 		echo json_encode($data);
 	}
@@ -64,7 +64,7 @@ function get_video() {
             'token'  => $token
         ];
 
-        $this->dashboard_model->insert_survei($data);
+        $this->Dashboard_model->insert_survei($data);
 
         echo json_encode([
             'status' => true,
@@ -75,7 +75,7 @@ function get_video() {
 
 	public function hasil_survei()
 {
-    $data = $this->dashboard_model->get_rekap_rating();
+    $data = $this->Dashboard_model->get_rekap_rating();
 
     $total_all = 0;
     foreach ($data as $d) {
@@ -107,7 +107,7 @@ function get_video() {
 
 public function summary_survei()
 {
-    $data = $this->dashboard_model->get_summary();
+    $data = $this->Dashboard_model->get_summary();
 
     $total = 0;
     $sum = 0;
@@ -143,7 +143,7 @@ public function summary_survei()
         $ip = $this->input->ip_address();
 
         // CEK DUPLIKAT (hari ini)
-        $exist = $this->dashboard_model->check_today($ip);
+        $exist = $this->Dashboard_model->check_today($ip);
 
         if ($exist) {
             echo json_encode([
@@ -164,7 +164,7 @@ public function summary_survei()
             'created_at' => date('Y-m-d H:i:s')
         ];
 
-        $this->dashboard_model->insert_visitor($data);
+        $this->Dashboard_model->insert_visitor($data);
 
         echo json_encode([
             'status' => true,
@@ -175,11 +175,11 @@ public function summary_survei()
 	  public function stats()
     {
           echo json_encode([
-            'today' => $this->dashboard_model->get_today(),
-            'yesterday' => $this->dashboard_model->get_yesterday(),
-            'month' => $this->dashboard_model->get_month(),
-            'year' => $this->dashboard_model->get_year(),
-            'total' => $this->dashboard_model->get_total(),
+            'today' => $this->Dashboard_model->get_today(),
+            'yesterday' => $this->Dashboard_model->get_yesterday(),
+            'month' => $this->Dashboard_model->get_month(),
+            'year' => $this->Dashboard_model->get_year(),
+            'total' => $this->Dashboard_model->get_total(),
         ]);
     }
 
