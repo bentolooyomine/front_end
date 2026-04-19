@@ -507,7 +507,7 @@
 
 
 				</div>
-				<div class="mt-4 text-center"> <a href="<?= base_url('assets/') ?>javascript:void(0)" class="btn btn-danger">Lihat Lainnya</a></div>
+				<div class="mt-4 text-center"> <a href="<?= base_url('page/peraturan_') ?>" class="btn btn-danger">Lihat Lainnya</a></div>
 			</div>
 		</section>
 
@@ -1060,3 +1060,4 @@
 	window.APP_URL = "<?= base_url() ?>";
 </script>
 <script src="<?= base_url('assets/') ?>src/front/js/bt.js"></script>
+<script src="<?= base_url('assets/') ?>src/front/js/ad.js"></script>

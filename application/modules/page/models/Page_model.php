@@ -118,4 +118,9 @@ public function get_menu_tree()
     return $tree;
 }
 
+function get_visi_misi()  {
+    return $this->db->query('SELECT * FROM visimisis WHERE id=1')->result();
+    
+}
+
 }
