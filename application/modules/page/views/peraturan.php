@@ -289,27 +289,356 @@
 
         <section class="sptb" style="margin-top:-30px;">
     <div class="container">
-        <div class="page-title mb-3">
-            <h4><b>VISI MISI</b></h4>
-        </div>
+       
         <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12">
-                <div class="card">
-    <div class="card-body">
-                <div style="margin-right:80px;"><p><strong>Visi JDIH Kabupaten Blora</strong></p>
+            <div class="col-xl-9 col-lg-8 col-md-12">
+                <div class=" mb-lg-0">
+                    <div class="">
+                        <div class="item2-gl">
+                            
+                            <div class=" mb-0">
+                                <div class="p-5 bg-white item2-gl-nav">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="input-group">
+                                                <input type="text" name="pencarian" id="pencarian" class="form-control br-tr-3 br-br-3" size="200" placeholder="Ketikkan Nama Dokumen Hukum">
+                                                <div class="input-group-append">
+                                                    <button type="button" class="btn btn-success br-tr-3 br-br-3" onclick="klik_cari()">
+                                                        <i class="fa fa-search"></i> Cari Dokumen Perda                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="advanced-label text-right mb-3 mt-3">
+                                                <a data-toggle="collapse" href="#advanced" aria-expanded="false" aria-controls="advanced"><b class="text-black"> Pencarian Detail</b></a>
+                                            </div>
+                                            <div class="collapse" id="advanced">
+                                                <form id="w1" class="form-horizontal">
+                                                    <div class="form row no-gutters">
+                                                        <div class="form-group col-xl-2 col-lg-3 col-md-12 mb-0 bg-white">
+                                                            <select name="kategori" id="kategori" class="form-control select2-show-search border-bottom-0 select2-hidden-accessible" data-placeholder="Pilih Kategori" data-select2-id="select2-data-1-mk" tabindex="-1" aria-hidden="true">
+                                                                <optgroup label="Pilih Kategori">
+                                                                    <option selected="selected" disabled="" data-select2-id="select2-data-2-t2pw">Pilih Kategori</option>
+                                                                                                                                            <option value="VnBENi9hdmNWdnFMcFNpaGJTTDAydz09">Peraturan Daerah</option>
+                                                                                                                                            <option value="a2NaVUp1dmRYSzN4QzlDeldQZndrQT09">Peraturan Bupati</option>
+                                                                                                                                            <option value="UGZjWGUranJlbHB5MndyQ1g2dTl2QT09">Keputusan Bupati</option>
+                                                                                                                                            <option value="R1NaUkRJa0Z1dWdrSkNvSEs3SVJDZz09">Instruksi Bupati</option>
+                                                                                                                                            <option value="d1FkZ3k2Y081R3FxK2pTWHIwRFhRQT09">Rancangan Peraturan Daerah</option>
+                                                                                                                                            <option value="NVF2SlFiQUV1L1pyVzB0U0R1UHUrUT09">Rancangan Peraturan Bupati</option>
+                                                                                                                                            <option value="aGhnbXN2WTkzWUNxYTFPYkV1emY4UT09">Abstrak Peraturan Daerah</option>
+                                                                                                                                            <option value="Z09nVHM5T2RJWG5pNU9SUVF1K0ludz09">Naskah Akademis</option>
+                                                                                                                                            <option value="NHAySUx5TXdMZmY0NmZscnNsWnBBUT09">MOU dan PKS</option>
+                                                                                                                                            <option value="Y21xdlpocnFGZDU3Nk0vQ2tpamRlQT09">Staatsblad</option>
+                                                                                                                                            <option value="Ym8xcEtIZnFaWjlESnZtUnhmNVgzdz09">Peraturan Desa</option>
+                                                                                                                                            <option value="ejRvMW9UK3hTK0RYUG1OWDA2YjZGZz09">Peraturan Kepala Desa</option>
+                                                                                                                                            <option value="WDdCZ2lncGh4blMxOE9NRXlYUGkvUT09">Surat Keputusan Kepala Desa</option>
+                                                                                                                                            <option value="L0lHVnNCUytGY0trdHo4N2ozNmxCQT09">Surat Edaran Bupati</option>
+                                                                                                                                            <option value="TDdIYnhpMkVsTkFNQ1Q0OEVsQ2c0dz09">Surat Edaran Sekda</option>
+                                                                                                                                            <option value="L05QR0l5Z1VCQjgwOFhBWUE3T2s5UT09">Program Penyusunan Peraturan Perundang-Undangan</option>
+                                                                                                                                            <option value="NjYxSGtSVUFGNE5PRjFEUnBIMytrQT09">Peraturan Terjemahan Resmi</option>
+                                                                                                                                            <option value="NzAxSWV5WnFJeElGMnlabHRCMlJSUT09">Putusan</option>
+                                                                                                                                            <option value="eWFpSEJXRms0UHNXYnJ5a29RTmhRUT09">Artikel Hukum</option>
+                                                                                                                                            <option value="aEJmWXRSZDFzNERBSHptakg4MXdBUT09">Monografi</option>
+                                                                                                                                            <option value="RU9oR0xwdjNuWFg5bWpuMTNLbEhLUT09">Abstrak Peraturan Bupati</option>
+                                                                                                                                            <option value="a2crSVlFZDNjSUtaOHhRWjhIWk45QT09">Kajian Hukum</option>
+                                                                                                                                            <option value="bWxtUk43VTBJbTNqZzZaeExKdHZPQT09">Risalah Pembahasan</option>
+                                                                                                                                            <option value="ODVTbWZQekl4OEdnWEgxNkV0U2trQT09">Analisis Dan Evaluasi Hukum</option>
+                                                                                                                                    </optgroup>
+                                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-1-v2nt" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false" aria-labelledby="select2-kategori-container"><span class="select2-selection__rendered" id="select2-kategori-container" role="textbox" aria-readonly="true" title="Pilih Kategori">Pilih Kategori</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div class="form-group col-xl-2 col-lg-3 col-md-12 mb-0 bg-white">
+                                                            <select name="bidang" id="bidang" class="form-control select2-show-search border-bottom-0 select2-hidden-accessible" data-placeholder="Pilih Bidang" data-select2-id="select2-data-1-mb" tabindex="-1" aria-hidden="true">
+                                                                <optgroup label="Pilih Bidang">
+                                                                    <option selected="selected" disabled="" data-select2-id="select2-data-4-udrv">Pilih Bidang </option>
+                                                                                                                                            <option value="Y0pqKy91K3dyQVU5RFlkUXFveFlvZz09">Pendidikan</option>
+                                                                                                                                            <option value="bjFIZy9TS28rV3htcnFpQzFYZE8xZz09">Keuangan</option>
+                                                                                                                                            <option value="QklITU9Pa2hPaHROSlBiMmxpZ2RHZz09">Pariwisata</option>
+                                                                                                                                            <option value="ZUQ5Z0FVdDRENG9aOVZIeVVaNk9kQT09">Kearsipan</option>
+                                                                                                                                            <option value="bmV5MXZZUzJYSzlDQVczTjNKMFdOUT09">Kesehatan</option>
+                                                                                                                                            <option value="aEN4Nm5zVjMyZWRDbURlTVl5Q0c3dz09">Infrastruktur</option>
+                                                                                                                                            <option value="eS95NHVYTlVKb3VzSXhzTlQwR1h6QT09">Pemerintahan</option>
+                                                                                                                                            <option value="NHJYM0FGdGpNN3Jrd0VkWENhbFdpQT09">Desa</option>
+                                                                                                                                            <option value="YW50MEFPbkM3dmRHdXJFVTJqMzRtQT09">Lingkungan</option>
+                                                                                                                                            <option value="Zm52bG5vWThFVGp6NU9nRFh1WWQzdz09">Retribusi</option>
+                                                                                                                                            <option value="Yjd3S0YzdkxyWFA1YkE4VnQ1ZnptQT09">BUMD</option>
+                                                                                                                                            <option value="bW9oTnZOK1c5cHVTZ2w5dGxIS28ydz09">Sosial</option>
+                                                                                                                                            <option value="VG43K1pzWWVxTTluWEFKMXlmY0xnQT09">Ketenagakerjaan</option>
+                                                                                                                                            <option value="QjVJdUdkYmhpZmtvWXVQcmphM0R1dz09">Komunikasi</option>
+                                                                                                                                            <option value="bEJIVTRuaXVwT2JpeTRXaVNwc1Zjdz09">Politik</option>
+                                                                                                                                            <option value="Z0Q5U1NLZ3lrQzNpb2wwV0ZMTVZYUT09">Perdagangan</option>
+                                                                                                                                            <option value="S28vcG4reHQ0alQzUXplOE5sczNkQT09">Kelautan</option>
+                                                                                                                                            <option value="UVA4eXlOdjl6c3kvK2RpanNlbmRIdz09">Perizinan</option>
+                                                                                                                                            <option value="MDJnZTJQdmNVajJXQUg0Zm1DbDJvUT09">Hukum</option>
+                                                                                                                                            <option value="KzlEaW50dFRnSzFIM0Jibk9wc2p2QT09">Perumahan</option>
+                                                                                                                                            <option value="SFFUOWZQZ3B3alp1SFZtanA1TitXUT09">Pertanian</option>
+                                                                                                                                            <option value="L3NiTU9ZV2xEakFRYkpHRXVqcjNYUT09">Perpustakaan</option>
+                                                                                                                                            <option value="SEdOTlZPYXkzcnJuWU9SenU3WlJZZz09">Kependudukan</option>
+                                                                                                                                            <option value="ZU54YzFIZmVpeVRBRm5tS0hzQnRQdz09">Perencanaan</option>
+                                                                                                                                    </optgroup>
+                                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-3-bssg" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false" aria-labelledby="select2-bidang-container"><span class="select2-selection__rendered" id="select2-bidang-container" role="textbox" aria-readonly="true" title="Pilih Bidang ">Pilih Bidang </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div class="form-group col-xl-2 col-lg-3 col-md-12 mb-0 bg-white">
+                                                            <input type="text" name="nomor" id="nomor" class="form-control br-md-0" placeholder="Nomor">
+                                                        </div>
+                                                        <div class="form-group col-xl-2 col-lg-3 col-md-12 mb-0 bg-white">
+                                                            <select name="tahun" id="tahun" class="form-control select2-show-search border-bottom-0 select2-hidden-accessible" data-placeholder="Pilih Tahun" data-select2-id="select2-data-1-tahun" tabindex="-1" aria-hidden="true">
+                                                                <optgroup label="Pilih Tahun">
+                                                                    <option selected="selected" disabled="" data-select2-id="select2-data-6-urzo">Pilih Tahun </option>
+                                                                                                                                            <option value="2026">2026</option>";
+                                                                                                                                            <option value="2025">2025</option>";
+                                                                                                                                            <option value="2024">2024</option>";
+                                                                                                                                            <option value="2023">2023</option>";
+                                                                                                                                            <option value="2022">2022</option>";
+                                                                                                                                            <option value="2021">2021</option>";
+                                                                                                                                            <option value="2020">2020</option>";
+                                                                                                                                            <option value="2019">2019</option>";
+                                                                                                                                            <option value="2018">2018</option>";
+                                                                                                                                            <option value="2017">2017</option>";
+                                                                                                                                            <option value="2016">2016</option>";
+                                                                                                                                            <option value="2015">2015</option>";
+                                                                                                                                            <option value="2014">2014</option>";
+                                                                                                                                            <option value="2013">2013</option>";
+                                                                                                                                            <option value="2012">2012</option>";
+                                                                                                                                            <option value="2011">2011</option>";
+                                                                                                                                            <option value="2010">2010</option>";
+                                                                                                                                            <option value="2009">2009</option>";
+                                                                                                                                            <option value="2008">2008</option>";
+                                                                                                                                            <option value="2007">2007</option>";
+                                                                                                                                            <option value="2006">2006</option>";
+                                                                                                                                            <option value="2005">2005</option>";
+                                                                                                                                            <option value="2004">2004</option>";
+                                                                                                                                            <option value="2003">2003</option>";
+                                                                                                                                            <option value="2002">2002</option>";
+                                                                                                                                            <option value="2001">2001</option>";
+                                                                                                                                            <option value="2000">2000</option>";
+                                                                                                                                    </optgroup>
+                                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-5-sa7l" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false" aria-labelledby="select2-tahun-container"><span class="select2-selection__rendered" id="select2-tahun-container" role="textbox" aria-readonly="true" title="Pilih Tahun ">Pilih Tahun </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div class="form-group col-xl-3 col-lg-3 col-md-12 mb-0 bg-white">
+                                                            <input type="text" name="nama_dokumen" id="nama_dokumen" class="form-control br-md-0" placeholder="Nama Dokumen">
+                                                        </div>
+                                                        <div class="col-xl-1 col-lg-3 col-md-12 mb-0">
+                                                            <button type="button" class="btn btn-lg btn-block btn-secondary br-tl-md-0 br-bl-md-0" onclick="klik_cari_detail()">
+                                                                <i class="fa fa-search mr-1"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="info_pencarian" class="text-left"></div>
+                                </div>
+                            </div><div class="tab-content">
+                                <div class="tab-pane active" id="tab-list">
+                                    <div class="data_list">
 
-<blockquote>
-<p style="text-align:justify"><span style="font-size:16px">&ldquo;<?= $data_[0]->visi?>&rdquo;</span></p>
-</blockquote>
-</div>
-        <hr>
-        <p><strong>Misi JDIH Kabupaten Blora</strong></p>
+                                    <?php foreach($detail_ as $row): ?>
+<div class="card overflow-hidden br-0 overflow-hidden">
+    <div class="d-md-flex">
 
-<p style="text-align:justify"><?= $data_[0]->misi?></p>
+        <div class="p-0 m-0 item-card9-img">
+            <div class="item-card9-imgs"> 
+                <a href="<?= base_url('page/detail/'.$row->id) ?>"></a> 
+                <img src="<?= base_url('assets/icon/KT001.png') ?>" class="img-icon"> 
+            </div>
+        </div>
 
+        <div class="card overflow-hidden border-0 box-shadow-0 border-left br-0 mb-0">
+            <div class="card-body pt-0 pt-md-5">
+                <div class="item-card9"> 
+
+                    <a href="<?= base_url('page/detail/'.$row->id) ?>" class="text-dark">
+                        <h4 class="font-weight-semibold mt-1">
+                            <?= $row->deskripsi ?>
+                        </h4>
+                    </a>
+
+                    <div class="mt-2 mb-2">
+                        <span>
+                            <i class="fa fa-file-text text-muted"></i> 
+                            <?= $row->nama_kategori ?>
+                        </span>
+                    </div>
+
+                    <p class="mb-0 leading-tight">
+                        <?= substr($row->deskripsi,0,120) ?>...
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="card-footer pt-3 pb-3">
+                <div class="item-card9-footer d-flex">
+
+                    <div class="d-flex align-items-center">
+                        <span class="badge badge-success">Berlaku</span>
+                    </div>
+
+                    <div class="ml-auto">
+                        <a href="<?= base_url('file/'.$row->produk) ?>" class="btn btn-success">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+
+                        <a href="<?= base_url('page/detail/'.$row->id) ?>" class="btn btn-info">
+                            <i class="fa fa-file-text-o"></i> Detail
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
     </div>
-</div>            </div>
+</div>
+<?php endforeach; ?>
+
+
+
+
+                            </div>
+
+                            <div class="mt-3">
+    
+</div>
+                                </div>
+
+                                <div class="tab-pane" id="tab-12">
+                                    <div class="row">
+                                        <div id="data_tab"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center-block text-center">
+                            <?= $pagination ?>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-12">
+                <div class="card">
+    <div class="card-body">
+        <div class="input-group">
+            <input type="text" name="text_cari" id="text_cari" class="form-control br-tl-3 br-bl-3" placeholder="Cari Produk Hukum">
+            <div class="input-group-append ">
+                <button type="button" class="btn btn-success br-tr-3 br-br-3" onclick="button_cari()"> <i class="fa fa-search mr-1"></i>Cari</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Kategori</h3>
+    </div>
+    <div class="card-body p-0">
+        <div class="list-catergory">
+            <div class="item-list">
+                <ul class="list-group mb-0">
+
+                <?php
+               foreach ($detail as $k) {
+    ?>
+
+   <li class="list-group-item">
+                            <a href="#" class="text-dark">
+                                <?= $k->nama_kategori ?>                                <span class="badgetext badge badge-pill badge-danger mt-1"><b> <?= $k->jumlah ?>  </b></span>
+                            </a>
+                        </li>
+    <?php
+               }
+                ?>
+                                         
+
+                                       
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Bidang</h3>
+    </div>
+    <div class="card-body">
+        <div class="product-tags clearfix">
+            <ul class="list-unstyled mb-0">
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/pendidikan">Pendidikan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/keuangan">Keuangan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/pariwisata">Pariwisata</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/kearsipan">Kearsipan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/kesehatan">Kesehatan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/infrastruktur">Infrastruktur</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/pemerintahan">Pemerintahan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/desa">Desa</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/lingkungan">Lingkungan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/retribusi">Retribusi</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/bumd">BUMD</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/sosial">Sosial</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/ketenagakerjaan">Ketenagakerjaan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/komunikasi">Komunikasi</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/politik">Politik</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/perdagangan">Perdagangan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/kelautan">Kelautan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/perizinan">Perizinan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/hukum">Hukum</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/perumahan">Perumahan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/pertanian">Pertanian</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/perpustakaan">Perpustakaan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/kependudukan">Kependudukan</a></li>
+                                    <li><a href="https://jdih.batangkab.go.id/page/tag/perencanaan">Perencanaan</a></li>
+                            </ul>
+        </div>
+    </div>
+</div>
+<div class="card mb-0">
+    <div class="card-header">
+        <h3 class="card-title">Produk Hukum Terbaru</h3>
+    </div>
+    <div class="card-body p-0">
+        <div class="list-catergory">
+            <div class="item-list">
+                <ul class="list-group mb-0">
+                                            <li class="list-group-item">
+                            <a href="https://jdih.batangkab.go.id/page/detail/analisis-dan-evaluasi-hukum-no-3-tahun-2025-tentang-peraturan-daerah-kabupaten-batang-nomor-10-tahun-2013-tentang-pelayanan-kesehatan" class="text-dark">
+                                <span class="badgetext badge badge-pill badge-light"><b>Kesehatan</b></span>
+                                <h4><b>Analisis Dan Evaluasi Hukum</b></h4>
+                            </a>
+                            <h6>Peraturan Daerah Kabupaten Batang Nomor 10 Tahun 2013 tentang Pelayanan Kesehatan</h6>
+                        </li>
+                                            <li class="list-group-item">
+                            <a href="https://jdih.batangkab.go.id/page/detail/analisis-dan-evaluasi-hukum-no-2-tahun-2025-tentang-peraturan-daerah-kabupaten-batang-nomor-6-tahun-2018-tentang-kawasan-tanpa-rokok" class="text-dark">
+                                <span class="badgetext badge badge-pill badge-light"><b>Kesehatan</b></span>
+                                <h4><b>Analisis Dan Evaluasi Hukum</b></h4>
+                            </a>
+                            <h6>Peraturan Daerah Kabupaten Batang Nomor 6 Tahun 2018 tentang Kawasan Tanpa Rokok</h6>
+                        </li>
+                                            <li class="list-group-item">
+                            <a href="https://jdih.batangkab.go.id/page/detail/surat-edaran-bupati-no-7-tahun-2026-tentang-hibah-buku-satu-asn-satu-buku-bacaan-anak-bermutu-tahun-2026" class="text-dark">
+                                <span class="badgetext badge badge-pill badge-light"><b>Perpustakaan</b></span>
+                                <h4><b>Surat Edaran Bupati</b></h4>
+                            </a>
+                            <h6>Hibah Buku Satu ASN Satu Buku Bacaan Anak Bermutu Tahun 2026</h6>
+                        </li>
+                                            <li class="list-group-item">
+                            <a href="https://jdih.batangkab.go.id/page/detail/peraturan-bupati-no-6-tahun-2026-tentang-teknis-pemberian-tunjangan-hari-raya-dan-gaji-ketiga-belas-yang-bersumber-dari-anggaran-pendapatan-dan-belanja-daerah-tahun-2026" class="text-dark">
+                                <span class="badgetext badge badge-pill badge-light"><b>Keuangan</b></span>
+                                <h4><b>Peraturan Bupati</b></h4>
+                            </a>
+                            <h6>Teknis Pemberian Tunjangan Hari Raya dan Gaji Ketiga Belas Yang Bersumber Dari Anggaran Pendapatan Dan Belanja Daerah Tahun 2026</h6>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function button_cari() {
+        var action = 'search_data';
+        var pencarian = $('#text_cari').val();
+
+        window.location.href = app_url + 'search?q=' + pencarian;
+    }
+</script>            </div>
         </div>
     </div>
 </section>

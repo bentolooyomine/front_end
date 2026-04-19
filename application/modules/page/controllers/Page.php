@@ -15,11 +15,39 @@ class Page extends MY_Controller
 	$this->load->view('visi_misi',$data);
 	}
 public function peraturan_()
-	{
+{
+    $this->load->library('pagination');
+    $this->load->model('Page_model');
+    $this->Page_model-> get_detail_();
+
+    $config['base_url'] = base_url('page/peraturan_');
+    $config['total_rows'] = $this->Page_model->count_produk(); // total data
+    $config['per_page'] = 10;
+    $config['uri_segment'] = 3;
+        // Bootstrap style
+    $config['full_tag_open'] = '<ul class="pagination justify-content-center">';
+    $config['full_tag_close'] = '</ul>';
+    $config['attributes'] = ['class' => 'page-link'];
+
+    $config['cur_tag_open'] = '<li class="page-item active"><a class="page-link">';
+    $config['cur_tag_close'] = '</a></li>';
+    $config['num_tag_open'] = '<li class="page-item">';
+    $config['num_tag_close'] = '</li>';
+
+    $this->pagination->initialize($config);
+
+    $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
     $data['menu'] = $this->Page_model->get_menu_tree();
-    // $data['data_'] = $this->Page_model->get_visi_misi();
-	$this->load->view('peraturan',$data);
-	}
+    $data['detail'] = $this->Page_model->get_detail_();
+    $data['detail_'] = $this->Page_model->get_produk($config['per_page'], $page);
+    $data['pagination'] = $this->pagination->create_links();
+    
+
+    $this->load->view('peraturan', $data);
+}
+
+
 
 }
 

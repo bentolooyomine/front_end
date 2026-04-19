@@ -123,4 +123,20 @@ function get_visi_misi()  {
     
 }
 
+   public function get_produk($limit, $start)
+{
+    $this->db->select('produks.*, kategoriproduks.nama_kategori');
+    $this->db->from('produks');
+    $this->db->join('kategoriproduks', 'produks.kategori = kategoriproduks.id', 'left');
+    $this->db->order_by('produks.id', 'DESC');
+    $this->db->limit($limit, $start);
+
+    return $this->db->get()->result();
+}
+
+public function count_produk()
+{
+    return $this->db->count_all('produks');
+}
+
 }
