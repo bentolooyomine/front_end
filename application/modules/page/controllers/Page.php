@@ -49,6 +49,27 @@ public function peraturan_()
 
 
 
+public function detail($id)
+{
+    $data['id'] = $id;
+    $this->load->view('redirect_post', $data);
+}
+
+public function detail_peraturan()
+{
+    $id = $this->input->post('id');
+
+    if (!$id) {
+        redirect('page'); // jaga-jaga kalau akses langsung
+    }
+
+$data['menu'] = $this->Page_model->get_menu_tree();
+    $data['detail'] = $this->Page_model->get_detail_();
+
+    $this->load->view('detail_peraturan',$data);
+}
+
+
 }
 
 
