@@ -139,4 +139,34 @@ public function count_produk()
     return $this->db->count_all('produks');
 }
 
+
+function get_data_peraturan($id) {
+    return $this->db->query('SELECT * FROM produks WHERE produks.id = '.$id)->result();
+    
+}
+
+
+
+   public function get_beritas($limit, $start)
+{
+    $this->db->select('beritas.*, beritas.judul');
+    $this->db->from('beritas');
+    // $this->db->join('kategoriproduks', 'produks.kategori = kategoriproduks.id', 'left');
+    $this->db->order_by('beritas.id', 'DESC');
+    $this->db->limit($limit, $start);
+
+    return $this->db->get()->result();
+}
+
+public function count_beritas()
+{
+    return $this->db->count_all('beritas');
+}
+
+function get_data_berita($id) {
+    return $this->db->query('SELECT * FROM beritas WHERE beritas.id = '.$id)->result();
+    
+}
+
+
 }

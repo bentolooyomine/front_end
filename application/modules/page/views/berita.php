@@ -311,7 +311,7 @@
                                                 <a data-toggle="collapse" href="#advanced" aria-expanded="false" aria-controls="advanced"><b class="text-black"> Pencarian Detail</b></a>
                                             </div>
                                             <div class="collapse" id="advanced">
-                                                <!-- <form id="w1" class="form-horizontal">
+                                                <form id="w1" class="form-horizontal">
                                                     <div class="form row no-gutters">
                                                         <div class="form-group col-xl-2 col-lg-3 col-md-12 mb-0 bg-white">
                                                             <select name="kategori" id="kategori" class="form-control select2-show-search border-bottom-0 select2-hidden-accessible" data-placeholder="Pilih Kategori" data-select2-id="select2-data-1-mk" tabindex="-1" aria-hidden="true">
@@ -421,7 +421,7 @@
                                                             </button>
                                                         </div>
                                                     </div>
-                                                </form> -->
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -431,7 +431,65 @@
                                 <div class="tab-pane active" id="tab-list">
                                     <div class="data_list">
 
-                                    
+                                    <?php foreach($detail_ as $row): ?>
+<div class="card overflow-hidden br-0 overflow-hidden">
+    <div class="d-md-flex">
+
+        <div class="p-0 m-0 item-card9-img">
+            <div class="item-card9-imgs"> 
+                <a href="<?= base_url('page/detail/'.$row->id) ?>"></a> 
+                <img src="<?= base_url('assets/icon/KT001.png') ?>" class="img-icon"> 
+            </div>
+        </div>
+
+        <div class="card overflow-hidden border-0 box-shadow-0 border-left br-0 mb-0">
+            <div class="card-body pt-0 pt-md-5">
+                <div class="item-card9"> 
+
+                    <a href="<?= base_url('page/detail/'.$row->id) ?>" class="text-dark">
+                        <h4 class="font-weight-semibold mt-1">
+                            <?= $row->deskripsi ?>
+                        </h4>
+                    </a>
+
+                    <div class="mt-2 mb-2">
+                        <span>
+                            <i class="fa fa-file-text text-muted"></i> 
+                            <?= $row->judul ?>
+                        </span>
+                    </div>
+
+                    <p class="mb-0 leading-tight">
+                        <?= substr($row->deskripsi,0,120) ?>...
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="card-footer pt-3 pb-3">
+                <div class="item-card9-footer d-flex">
+
+                    <div class="d-flex align-items-center">
+                        <!-- <span class="badge badge-success">Berlaku</span> -->
+                    </div>
+
+                    <div class="ml-auto">
+                        <!-- <a href="<?= base_url('file/'.$row->produk) ?>" class="btn btn-success">
+                            <i class="fa fa-download"></i> Download
+                        </a> -->
+
+                        <a href="<?= base_url('page/detail_berita/'.$row->id) ?>" class="btn btn-info">
+                            <i class="fa fa-file-text-o"></i> Detail
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<?php endforeach; ?>
 
 
 
@@ -451,176 +509,7 @@
                             </div>
                         </div>
                         <div class="center-block text-center">
-                          <div class="card">
-                    <div class="card-body">
-
-                    <?php
-                    print_r($data);
-                    ?>
-                        <h4><b style="line-height:1.6;"><?=$data[0]->deskripsi?></b></h4>
-                        <hr style="margin-top:5px;margin-bottom:5px;">
-                        <table class="table tb-detail table-striped table-hovered">
-                            <tbody><tr>
-                                <td valign="top" width="35%">Tipe Dokumen</td>
-                                <td valign="top" width="02%" align="center">:</td>
-                                <td valign="top" width="65%">Peraturan Perundang-undangan</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Nomor Peraturan</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">3</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Judul</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">Analisis Dan Evaluasi Hukum Nomor 3 Tahun 2025 Tentang Peraturan Daerah Kabupaten Batang Nomor 10 Tahun 2013 tentang Pelayanan Kesehatan</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Tahun Terbit</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">2025</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Singkatan Jenis/ Bentuk Peraturan</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">ANEV</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Jenis/Bentuk Peraturan</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">Analisis Dan Evaluasi Hukum</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Bidang</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">Kesehatan</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">OPD Pemrakarsa</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">Bagian Hukum</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Tanggal Penetapan</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">01 Oktober 2026</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Tanggal Pengundangan</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">01 Oktober 2026</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">TEU Badan/ Pengarang</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">Jawa Tengah, Kabupaten Batang</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Tempat Penetapan</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">Batang</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Penandatangan</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">-</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Bahasa</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">Indonesia</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Subjek</td>
-                                <td valign="top" align="center">:</td>
-                               <td valign="top">-</td>
-                               
-                            </tr>
-                            <tr>
-                                <td valign="top">Sumber</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">
-                                    <p style="text-align:justify;line-height:1.5;" class="mb-0">-</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Lokasi</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">
-                                    <p style="text-align:justify;line-height:1.5;" class="mb-0">Bagian Hukum Setda Kabupaten Batang </p>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <td>Peraturan Terkait</td>
-                                <td align="center">:</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>Peraturan Pelaksana</td>
-                                <td align="center">:</td>
-                                    <td>
-                                        <ol>
-                                                                                        </ol>
-                                    </td> 
-                            </tr>
-                            <tr>
-                                <td>Dokumen Terkait</td>
-                                <td align="center">:</td>
-                                    <td>
-                                        <ol>
-                                                                                        </ol>
-                                    </td> 
-                            </tr>
-                            <tr>
-                                <td valign="top">Status Peraturan</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">
-                                    <span class="badge badge-success font-size-14">Berlaku</span>                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Status Terbit</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">
-                                    <span class="badge badge-primary font-size-14">RILIS</span>                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Dilihat</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">98 Kali</td>
-                            </tr>
-                            <tr>
-                                <td valign="top">Diunggah</td>
-                                <td valign="top" align="center">:</td>
-                                <td valign="top">05 Januari 2026 jam  08:05</td>
-                            </tr>
-                        </tbody></table>
-                        <hr style="margin-top:-10px;margin-bottom:15px;">
-                        <div>
-                            <div class="mb-3">
-                                <b>Lampiran : <button>Analisis Dan Evaluasi Hukum Nomor 3 Tahun 2025.pdf</button> &nbsp;&nbsp;<a href="https://jdih.batangkab.go.id/file/ph002017-analisis-dan-evaluasi-hukum-no-3-tahun-2025.pdf" download="" target="_blank" class="btn btn-sm btn-success"><i class="fa fa-download"></i> Donwload File</a></b>
-                            </div>
-                            <iframe src="https://jdih.batangkab.go.id/file/ph002017-analisis-dan-evaluasi-hukum-no-3-tahun-2025.pdf" width="100%" height="600px"></iframe>
-                        </div>
-
-                        
-                    </div>
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col-md-2"><b>Bagikan :</b></div>
-                            <div class="col-md-10">
-                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="line-height: 32px;">
-                                    <a class="a2a_button_facebook" target="_blank" rel="nofollow noopener" href="/#facebook"><span class="a2a_svg a2a_s__default a2a_s_facebook" style="background-color: rgb(8, 102, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#fff" d="M28 16c0-6.627-5.373-12-12-12S4 9.373 4 16c0 5.628 3.875 10.35 9.101 11.647v-7.98h-2.474V16H13.1v-1.58c0-4.085 1.849-5.978 5.859-5.978.76 0 2.072.15 2.608.298v3.325c-.283-.03-.775-.045-1.386-.045-1.967 0-2.728.745-2.728 2.683V16h3.92l-.673 3.667h-3.247v8.245C23.395 27.195 28 22.135 28 16"></path></svg></span><span class="a2a_label">Facebook</span></a>
-                                    <a class="a2a_button_whatsapp" target="_blank" rel="nofollow noopener" href="/#whatsapp"><span class="a2a_svg a2a_s__default a2a_s_whatsapp" style="background-color: rgb(18, 175, 10);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" fill-rule="evenodd" d="M16.21 4.41C9.973 4.41 4.917 9.465 4.917 15.7c0 2.134.592 4.13 1.62 5.832L4.5 27.59l6.25-2.002a11.24 11.24 0 0 0 5.46 1.404c6.234 0 11.29-5.055 11.29-11.29 0-6.237-5.056-11.292-11.29-11.292m0 20.69c-1.91 0-3.69-.57-5.173-1.553l-3.61 1.156 1.173-3.49a9.35 9.35 0 0 1-1.79-5.512c0-5.18 4.217-9.4 9.4-9.4s9.397 4.22 9.397 9.4c0 5.188-4.214 9.4-9.398 9.4zm5.293-6.832c-.284-.155-1.673-.906-1.934-1.012-.265-.106-.455-.16-.658.12s-.78.91-.954 1.096c-.176.186-.345.203-.628.048-.282-.154-1.2-.494-2.264-1.517-.83-.795-1.373-1.76-1.53-2.055s0-.445.15-.584c.134-.124.3-.326.45-.488.15-.163.203-.28.306-.47.104-.19.06-.36-.005-.506-.066-.147-.59-1.587-.81-2.173-.218-.586-.46-.498-.63-.505-.168-.007-.358-.038-.55-.045-.19-.007-.51.054-.78.332-.277.274-1.05.943-1.1 2.362-.055 1.418.926 2.826 1.064 3.023.137.2 1.874 3.272 4.76 4.537 2.888 1.264 2.9.878 3.43.85.53-.027 1.734-.633 2-1.297s.287-1.24.22-1.363c-.07-.123-.26-.203-.54-.357z" clip-rule="evenodd"></path></svg></span><span class="a2a_label">WhatsApp</span></a>
-                                    <a class="a2a_button_twitter" target="_blank" rel="nofollow noopener" href="/#twitter"><span class="a2a_svg a2a_s__default a2a_s_twitter" style="background-color: rgb(29, 155, 240);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M28 8.557a10 10 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.7 9.7 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.94 4.94 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a5 5 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174q-.476-.001-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.9 9.9 0 0 1-6.114 2.107q-.597 0-1.175-.068a13.95 13.95 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013q0-.32-.015-.637c.96-.695 1.795-1.56 2.455-2.55z"></path></svg></span><span class="a2a_label">Twitter</span></a>
-                                    <a class="a2a_button_telegram" target="_blank" rel="nofollow noopener" href="/#telegram"><span class="a2a_svg a2a_s__default a2a_s_telegram" style="background-color: rgb(44, 165, 224);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M25.515 6.896 6.027 14.41c-1.33.534-1.322 1.276-.243 1.606l5 1.56 1.72 5.66c.226.625.115.873.77.873.506 0 .73-.235 1.012-.51l2.43-2.363 5.056 3.734c.93.514 1.602.25 1.834-.863l3.32-15.638c.338-1.363-.52-1.98-1.41-1.577z"></path></svg></span><span class="a2a_label">Telegram</span></a>
-                                    <a class="a2a_button_email" target="_blank" rel="nofollow noopener" href="/#email"><span class="a2a_svg a2a_s__default a2a_s_email" style="background-color: rgb(136, 137, 144);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#fff" d="M27 21.775v-9.9s-10.01 6.985-10.982 7.348C15.058 18.878 5 11.875 5 11.875v9.9c0 1.375.293 1.65 1.65 1.65h18.7c1.393 0 1.65-.242 1.65-1.65m-.017-11.841c0-1.002-.291-1.359-1.633-1.359H6.65c-1.38 0-1.65.429-1.65 1.43l.016.154s9.939 6.842 11 7.216C17.14 16.941 27 10.005 27 10.005z"></path></svg></span><span class="a2a_label">Email</span></a>
-                                <div style="clear: both;"></div></div>
-                                <script async="" src="https://static.addtoany.com/menu/page.js"></script>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            <?= $pagination ?>
                             </div>
                     </div>
                 </div>
