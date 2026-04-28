@@ -140,6 +140,63 @@ $data['grafik6'] = $this->Page_model->grafik_growth();
     $this->load->view('statistik', $data);
 }
 
+//tugas pokok
+public function tugaspokok()
+	{
+    $data['menu'] = $this->Page_model->get_menu_tree();
+    $data['data_'] = $this->Page_model->tugaspokok();
+    $data['nama_modul'] = 'Tugas Pokok';
+	$this->load->view('tugas_pokok',$data);
+	}
+//hubungi kami
+
+public function hubungi_kami()
+	{
+    $data['menu'] = $this->Page_model->get_menu_tree();
+    $data['data_'] = $this->Page_model->hubungi_kami();
+    $data['nama_modul'] = 'Hubungi Kami';
+	$this->load->view('hubungi_kami',$data);
+	}
+
+
+    //anggota JDIH
+public function anggota_jdih()
+	{
+    $data['menu'] = $this->Page_model->get_menu_tree();
+    $data['data_'] = $this->Page_model->anggota_jdih();
+    $data['nama_modul'] = 'Anggota JDIH';
+	$this->load->view('anggota_jdih',$data);
+	}
+//sop JDIh
+    public function sop_jdih()
+	{
+    $data['menu'] = $this->Page_model->get_menu_tree();
+    $data['data_'] = $this->Page_model->sop_jdih();
+    $data['nama_modul'] = 'SOP JDIH';
+	$this->load->view('sop_jdih',$data);
+	}
+
+    //sop JDIh
+    public function struktur_organisasi()
+	{
+    $data['menu'] = $this->Page_model->get_menu_tree();
+    $data['data_'] = $this->Page_model->struktur_organisasi();
+    $data['nama_modul'] = 'Struktur Organisasi';
+	$this->load->view('struktur_organisasi',$data);
+	}
+
+
+
+    public function galeri_video()
+{
+    $data['menu'] = $this->Page_model->get_menu_tree();
+    $data['nama_modul'] = 'Galeri Video';
+    $data['video'] = $this->Page_model->galeri_video();
+
+    $this->load->view('galeri_video',$data);
+}
+
+
 }
 
 

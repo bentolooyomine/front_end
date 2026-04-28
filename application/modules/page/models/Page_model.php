@@ -239,5 +239,39 @@ public function grafik_growth()
     ")->result();
 }
 
+function tugaspokok()  {
+    return $this->db->query('SELECT * FROM tugaspokok WHERE id=1')->result();
+    
+}
+function hubungi_kami()  {
+    return $this->db->query('SELECT * FROM hubungi_kami WHERE id=1')->result();
+    
+}
 
+public function anggota_jdih()
+{
+    return $this->db
+        ->order_by('nama_anggota','ASC')
+        ->get('anggota_jdihs')
+        ->result();
+}
+
+function sop_jdih()  {
+    return $this->db->query('SELECT * FROM sop_jdih WHERE id=1')->result();
+    
+}
+
+function struktur_organisasi()  {
+    return $this->db->query('SELECT * FROM struktur_organisasi WHERE id=1')->result();
+    
+}
+
+public function galeri_video()
+{
+    return $this->db
+        ->where('status',1)
+        ->order_by('id','DESC')
+        ->get('galeri_videos')
+        ->result();
+}
 }
