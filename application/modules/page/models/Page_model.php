@@ -168,5 +168,76 @@ function get_data_berita($id) {
     
 }
 
+// grafic
+
+  public function grafik_kategori()
+    {
+        return $this->db->query("
+            SELECT kp.nama_kategori, COUNT(*) as jumlah
+            FROM produks p
+            JOIN kategoriproduks kp ON p.kategori = kp.id
+            GROUP BY p.kategori
+        ")->result();
+    }
+
+    public function grafik_tahun()
+    {
+        return $this->db->query("
+            SELECT tahun, COUNT(*) as jumlah
+            FROM produks
+            GROUP BY tahun
+            ORDER BY tahun ASC
+        ")->result();
+    }
+
+    public function grafik_status()
+    {
+        return $this->db->query("
+            SELECT 
+            CASE 
+                WHEN status = 0 THEN 'Tidak Aktif'
+                ELSE 'Aktif'
+            END as status_nama,
+            COUNT(*) as jumlah
+            FROM produks
+            GROUP BY status_nama
+        ")->result();
+    }
+
+    public function grafik_stack()
+    {
+        return $this->db->query("
+            SELECT tahun,
+            SUM(CASE WHEN status = 0 THEN 1 ELSE 0 END) as tidak_aktif,
+            SUM(CASE WHEN status != 0 THEN 1 ELSE 0 END) as aktif
+            FROM produks
+            GROUP BY tahun
+            ORDER BY tahun ASC
+        ")->result();
+    }
+
+
+    public function grafik_topkategori()
+{
+    return $this->db->query("
+        SELECT kp.nama_kategori, COUNT(*) as jumlah
+        FROM produks p
+        JOIN kategoriproduks kp ON p.kategori = kp.id
+        GROUP BY p.kategori
+        ORDER BY jumlah DESC
+        LIMIT 5
+    ")->result();
+}
+
+public function grafik_growth()
+{
+    return $this->db->query("
+        SELECT tahun, COUNT(*) as jumlah
+        FROM produks
+        GROUP BY tahun
+        ORDER BY tahun ASC
+    ")->result();
+}
+
 
 }

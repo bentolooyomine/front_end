@@ -127,7 +127,18 @@ public function detail_beritas()
     $this->load->view('detail_berita',$data);
 }
 
+function statistik() {
+    $data['menu'] = $this->Page_model->get_menu_tree();
 
+    $data['grafik_kategori'] = $this->Page_model->grafik_kategori();
+    $data['grafik_tahun']    = $this->Page_model->grafik_tahun();
+    $data['grafik_status']   = $this->Page_model->grafik_status();
+    $data['grafik_stack']    = $this->Page_model->grafik_stack();
+    $data['grafik5'] = $this->Page_model->grafik_topkategori();
+$data['grafik6'] = $this->Page_model->grafik_growth();
+
+    $this->load->view('statistik', $data);
+}
 
 }
 

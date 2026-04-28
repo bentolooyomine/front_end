@@ -550,7 +550,7 @@
 
 				</div>
 				<div class="text-center mt-5">
-					<a href="<?= base_url('assets/') ?>page/berita.html" class="btn btn-success"> Lihat Selengkapnya</a>
+					<a href="<?= base_url() ?>page/berita" class="btn btn-success"> Lihat Selengkapnya</a>
 				</div>
 			</div>
 		</section>
@@ -753,7 +753,7 @@
 					<div class="col-md-4">
 						<h3 class="text-dark font-weight-semibold">Grafik JDIH Kabupaten Blora</h3>
 						<p>Beberapa grafik statistik berikut menjelaskan beragam data dari dokumentasi dan informasi hukum, baik data status peraturan, jumlah peraturan dan jumlah dokumen hukum yang ada pada website JDIH Kab. Blora.</p>
-						<a href="<?= base_url('assets/') ?>page/statistik.html" class="btn btn-success btn-rounded text-white"><b>Selengkapnya</b></a>
+						<a href="<?= base_url() ?>page/statistik" class="btn btn-success btn-rounded text-white"><b>Selengkapnya</b></a>
 					</div>
 				</div>
 				<hr>
@@ -1060,4 +1060,4 @@
 	window.APP_URL = "<?= base_url() ?>";
 </script>
 <script src="<?= base_url('assets/') ?>src/front/js/bt.js"></script>
-<script src="<?= base_url('assets/') ?>src/front/js/ad.js"></script>
+<!-- <script src="<?= base_url('assets/') ?>src/front/js/ad.js"></script> -->
