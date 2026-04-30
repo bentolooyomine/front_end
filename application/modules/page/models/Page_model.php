@@ -266,12 +266,40 @@ function struktur_organisasi()  {
     
 }
 
-public function galeri_video()
+   public function get_produk_($limit, $start)
 {
-    return $this->db
-        ->where('status',1)
-        ->order_by('id','DESC')
-        ->get('galeri_videos')
-        ->result();
+    $this->db->select('produks.*, kategoriproduks.nama_kategori');
+    $this->db->from('produks');
+    $this->db->join('kategoriproduks', 'produks.kategori = kategoriproduks.id', 'left');
+    $this->db->order_by('produks.id', 'DESC');
+    $this->db->limit($limit, $start);
+
+    return $this->db->get()->result();
 }
+
+   public function get_produks($limit, $start,$id_menu)
+{
+    $this->db->select('produks.*, kategoriproduks.nama_kategori');
+    $this->db->from('produks');
+    $this->db->join('kategoriproduks', 'produks.kategori = kategoriproduks.id', 'left');
+        $this->db->where('produks.kategori', $id_menu); 
+    $this->db->order_by('produks.id', 'DESC');
+    $this->db->limit($limit, $start);
+
+    return $this->db->get()->result();
+}
+
+
+public function count_produks($id_menu)
+{ $this->db->where('produks.kategori', $id_menu); 
+    return $this->db->count_all('produks');
+}
+
+function get_menu_produks($id_menu){
+     $this->db->select('*');
+       $this->db->from('kategoriproduks');
+         $this->db->where('kategoriproduks.id', $id_menu); 
+         return $this->db->get()->result();
+}
+
 }

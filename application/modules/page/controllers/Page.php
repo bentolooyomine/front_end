@@ -197,6 +197,42 @@ public function anggota_jdih()
 }
 
 
+public function peraturan($id_menu)
+{
+
+    $this->load->library('pagination');
+    $this->load->model('Page_model');
+
+    $config['base_url'] = base_url('page/peraturan/'.$id_menu);
+    $config['total_rows'] = $this->Page_model->count_produks($id_menu);
+    $config['per_page'] = 10;
+    $config['uri_segment'] = 4; // <-- pindah ke segment 4
+
+    // Bootstrap style
+    $config['full_tag_open'] = '<ul class="pagination justify-content-center">';
+    $config['full_tag_close'] = '</ul>';
+    $config['attributes'] = ['class' => 'page-link'];
+
+    $config['cur_tag_open'] = '<li class="page-item active"><a class="page-link">';
+    $config['cur_tag_close'] = '</a></li>';
+    $config['num_tag_open'] = '<li class="page-item">';
+    $config['num_tag_close'] = '</li>';
+
+    $this->pagination->initialize($config);
+
+    // ambil page dari segment 4
+    $page = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
+
+    $data['menu'] = $this->Page_model->get_menu_tree();
+    $data['detail'] = $this->Page_model->get_detail_();
+    $data['detail_'] = $this->Page_model->get_produks($config['per_page'], $page, $id_menu);
+    $data['pagination'] = $this->pagination->create_links();
+    $data['nama_menu'] = $this->Page_model->get_menu_produks($id_menu);
+
+    $this->load->view('peraturan_', $data);
+
+}
+
 }
 
 

@@ -428,7 +428,7 @@
                                     <div id="info_pencarian" class="text-left"></div>
                                 </div>
                             </div><div class="tab-content">
-                               
+                               <h5> Pencarian <?=$nama_menu[0]->nama_kategori?></h5>
                                 <div class="tab-pane active" id="tab-list">
                                     <div class="data_list">
 
