@@ -302,4 +302,30 @@ function get_menu_produks($id_menu){
          return $this->db->get()->result();
 }
 
+
+
+	public function galeri_kegiatan()
+	{
+	return $this->db->query('SELECT * FROM galeris ORDER BY galeris.id DESC LIMIT 4')->result();
+	
+		
+	}
+
+
+    public function katalog_perda()
+{
+    return $this->db
+        ->where('status', 'aktif') // hanya yang aktif
+        ->order_by('tahun', 'DESC')
+        ->get('katalog_perda')
+        ->result();
+}
+    public function katalog_perda()
+{
+    return $this->db
+        ->where('status', 'aktif') // hanya yang aktif
+        ->order_by('tahun', 'DESC')
+        ->get('katalog_perbub')
+        ->result();
+}
 }

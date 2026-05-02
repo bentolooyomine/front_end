@@ -233,6 +233,36 @@ public function peraturan($id_menu)
 
 }
 
+
+    public function galeri_kegiatan()
+{
+    $data['menu'] = $this->Page_model->get_menu_tree();
+    $data['nama_modul'] = 'Galeri Kegiatan';
+    $data['gambar'] = $this->Page_model->galeri_kegiatan();
+
+    $this->load->view('galeri_kegiatan',$data);
+}
+
+
+    public function katalog_perda()
+{
+    $data['menu'] = $this->Page_model->get_menu_tree();
+    $data['nama_modul'] = 'Katalog Perda';
+    $data['gambar'] = $this->Page_model->katalog_perda();
+
+    $this->load->view('katalog_perda',$data);
+}
+
+   public function katalog_perbub()
+{
+    $data['menu'] = $this->Page_model->get_menu_tree();
+    $data['nama_modul'] = 'Katalog Perbub';
+    $data['gambar'] = $this->Page_model->katalog_perbub();
+
+    $this->load->view('katalog_perbub',$data);
+}
+
+
 }
 
 

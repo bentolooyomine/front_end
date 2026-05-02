@@ -492,7 +492,7 @@
 											</div>
 										</div>
 										<div class="col-md-3 col-auto">
-											<div class="icons mt-3 mt-sm-0 pb-0"> <a href="<?= base_url('detail/peraturan/' . $k->id) ?>" class="btn btn-success mt-2 float-md-right"> Detail</a></div>
+											<div class="icons mt-3 mt-sm-0 pb-0"> <a href="<?= base_url('page/detail/' . $k->id) ?>" class="btn btn-success mt-2 float-md-right"> Detail</a></div>
 										</div>
 									</div>
 								</div>
@@ -533,7 +533,7 @@
 										<div class="item7-card-desc d-flex mb-2">
 											<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted mr-2"></i><?= $k->tgl_publish ?> </a>
 										</div>
-										<a href="<?= base_url('detail/berita/' . $k->id) ?>" class="text-dark">
+										<a href="<?= base_url('page/detail_berita/' . $k->id) ?>" class="text-dark">
 											<h4 class="font-weight-semibold"><?= $k->judul ?> </h4>
 										</a>
 										<!-- <p><p style="text-align:justify">Pada tanggal 23 Februari 2026, Komisi A DPRD Kabupaten Kudus melaksanakan kunjungan kerja ke Jaringan Dokumentasi dan Informasi Hukum (JDIH) Kabupaten Blora. Kunjungan i... <a href="<?= base_url('assets/') ?>https://jdih.batangkab.go.id/page/berita_detail/kunjungan-kerja-komisi-a-dewan-perwakilan-rakyat-daerah-kabupaten-kudus"><b class="text-success">Selengkapnya</b></a></p> -->
